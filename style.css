@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  animation: nav-load 600ms ease-in;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  display: flex;
+  list-style: none;
+  background-color: aquamarine;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+li {
+  padding: 10px;
+  transition: 0.2s;
+}
+
+li:hover {
+  background-color: bisque;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.hero h1 {
+  font-size: 100px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  animation: nav-load 600ms ease-in;
+}
+
+.hero img {
+  margin-top: 20px;
+  height: 20rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2.5rem;
+}
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.hobbyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.omContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.omContainer .info {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: load-left-to-right 500ms ease-in;
+  margin-left: 20vw;
+  margin-right: 10px;
+}
+.omContainer .info h2 {
+  font-size: 40px;
+}
+
+.omContainer button {
+  width: 10rem;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top: 1.2em;
+  transition: 0.2s ease-in;
+}
+
+.omContainer button:hover {
+  transform: scale(1.1);
+}
+
+.omContainer img {
+  animation: load-right-to-left 500ms ease-in;
+  align-self: flex-start;
+  margin-right: 20vw;
+}
+@keyframes nav-load {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes load-left-to-right {
+  0% {
+    transform: translatex(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+
+@keyframes load-right-to-left {
+  0% {
+    transform: translatex(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
