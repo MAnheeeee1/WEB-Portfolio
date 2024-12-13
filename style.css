@@ -1,39 +1,109 @@
+/**
+* @license
+*
+* Font Family: Clash Display
+* Designed by: Indian Type Foundry
+* URL: https://www.fontshare.com/fonts/clash-display
+* © 2024 Indian Type Foundry
+*
+* Clash Display Extralight
+* Clash Display Light
+* Clash Display Regular
+* Clash Display Medium
+* Clash Display Semibold
+* Clash Display Bold
+* Clash Display Variable (Variable font)
+
+*
+*/
+@font-face {
+  font-family: 'ClashDisplay-Extralight';
+  src: url('./fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+  url('./fonts/ClashDisplay-Extralight.woff') format('woff'),
+  url('./fonts/ClashDisplay-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('./fonts/ClashDisplay-Regular.woff2') format('woff2'),
+  url('./fonts/ClashDisplay-Regular.woff') format('woff'),
+  url('./fonts/ClashDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2'),
+  url('./fonts/ClashDisplay-Medium.woff') format('woff'),
+  url('./fonts/ClashDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('./fonts/ClashDisplay-Bold.woff2') format('woff2'),
+  url('./fonts/ClashDisplay-Bold.woff') format('woff'),
+  url('./fonts/ClashDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+
+
 * {
   margin: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 nav {
   display: flex;
   justify-content: center;
   animation: nav-load 600ms ease-in;
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 35px;
+  color: white;
 }
 
 body {
   position: relative;
   min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ClashDisplay-Regular, Helvetica, sans-serif;
+  background-image: url(./img/background.jpg);
+  background-size: cover;
 }
 ul {
   display: flex;
   list-style: none;
-  background-color: aquamarine;
   padding: 10px 20px;
-  border-radius: 10px;
+
 }
 li {
   padding: 10px;
   transition: 0.2s;
 }
 
-li:hover {
-  background-color: bisque;
-  border-radius: 5px;
-}
+
 a {
   text-decoration: none;
   font-size: 20px;
-  color: black;
+  color: white;
 }
 
 .hero h1 {
@@ -41,11 +111,15 @@ a {
   margin-top: 30px;
   margin-bottom: 50px;
   animation: nav-load 600ms ease-in;
+  color:white;
+  font-family: ClashDisplay-Bold, Helvetica, sans-serif;
 }
 
 .hero img {
   margin-top: 20px;
   height: 20rem;
+  margin-bottom: 50px;
+  border-radius: 50% 20% / 10% 40%;
 }
 
 .hero {
@@ -97,7 +171,7 @@ footer {
   width: 10rem;
   padding: 10px 20px;
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 15px;
   margin-top: 1.2em;
   transition: 0.2s ease-in;
@@ -144,3 +218,4 @@ footer {
     opacity: 1;
   }
 }
+
