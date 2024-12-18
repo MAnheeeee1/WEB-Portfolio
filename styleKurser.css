@@ -1,6 +1,71 @@
+/**
+* @license
+*
+* Font Family: Clash Display
+* Designed by: Indian Type Foundry
+* URL: https://www.fontshare.com/fonts/clash-display
+* © 2024 Indian Type Foundry
+*
+* Clash Display Extralight
+* Clash Display Light
+* Clash Display Regular
+* Clash Display Medium
+* Clash Display Semibold
+* Clash Display Bold
+* Clash Display Variable (Variable font)
+
+*
+*/
+@font-face {
+    font-family: 'ClashDisplay-Extralight';
+    src: url('./fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+    url('./fonts/ClashDisplay-Extralight.woff') format('woff'),
+    url('./fonts/ClashDisplay-Extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Regular';
+    src: url('./fonts/ClashDisplay-Regular.woff2') format('woff2'),
+    url('./fonts/ClashDisplay-Regular.woff') format('woff'),
+    url('./fonts/ClashDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ClashDisplay-Medium';
+    src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2'),
+    url('./fonts/ClashDisplay-Medium.woff') format('woff'),
+    url('./fonts/ClashDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Bold';
+    src: url('./fonts/ClashDisplay-Bold.woff2') format('woff2'),
+    url('./fonts/ClashDisplay-Bold.woff') format('woff'),
+    url('./fonts/ClashDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+h1{
+    font-size: 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    animation: nav-load 600ms ease-in;
+    color:white;
+    font-family: ClashDisplay-Bold, Helvetica, sans-serif;
+}
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: ClashDisplay-Regular, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav {
@@ -17,8 +82,12 @@ nav {
 body {
     position: relative;
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(220.55deg, #4063BC 0%, #6B0013 100%);
+    font-family: ClashDisplay-Regular, Helvetica, sans-serif;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 ul {
     display: flex;
@@ -74,20 +143,61 @@ footer {
     }
 }
 
-.kurscontainer{
+.kursGrid{
     display: flex;
-    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.kurs {
-    height: 80vh;
-    background-color: #6B0013;
-    width: 20px;
-    flex: 1 1 0;
-    transition: 0.2s;
-    border: 2px solid black;
+.card {
+    width: 320px;
+    height: 350px;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #b93048, #2d1977) border-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.kurs:hover{
-    padding-right: 100px;
+.card .main-content {
+    flex: 1;
+}
+
+.card .header span:first-child {
+    font-weight: 600;
+    color: #717171;
+    margin-right: 4px;
+}
+
+.card .heading {
+    font-size: 24px;
+    margin: 24px 0 16px;
+    font-weight: 600;
+}
+
+.card .lärdomar {
+    display: flex;
+    gap: 8px;
+}
+
+.card .lärdomar span {
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 4px 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50em;
+}
+
+.card .footer {
+    font-weight: 600;
+    color: #717171;
+    margin-right: 4px;
 }
